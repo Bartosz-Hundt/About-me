@@ -1,0 +1,980 @@
+/* General settings */
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #242F3F;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  overflow-x: hidden;
+}
+.wrapper {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  margin: 10px auto 0 auto;
+  z-index: 90;
+  box-shadow: 0 2rem 4rem #000;
+  background-color: #242F3F;
+}
+.cleaner {
+  clear:both;
+  display: none;
+}
+#scrollup {
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #445978;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(10%) opacity(60%);
+  text-decoration: none;
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  display: none;
+  font-weight: bold;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* Loader */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+/* Resize */
+
+
+/* navigation */
+.main-nav-header {
+    width: 100vw;
+  }
+.main-nav {
+    width: 100vw;
+    min-width: 500px;
+    height: 80px;
+    background-color: #445978;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+  }
+.my-sentence-container {
+  position: relative;
+  bottom: 20px;
+  height: 50px;
+  z-index: 100;
+}
+.my-sentence {
+   position: fixed;
+   top: 10px;
+   left: 0;
+  font-family: 'Handlee', cursive;
+  display: inline-block;
+  height: 1em;
+  padding: 10px;
+}
+.item {
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 5px;
+  height: 70%;
+  width: 100%;
+}
+.my-sentence-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.my-sentence > li, .my-sentence-container > li {
+  list-style-type: none;
+  font-size: 23px;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 10px;
+
+}
+.main-nav-list > a > li {
+  list-style-type: none;
+  padding: 20px 20px 38px 20px;
+  font-size: 23px;
+  height: 10px;
+  border-right: 1px dotted black;
+
+}
+.main-nav-list > a > li:first-child {
+  border-left: 1px dotted black;
+}
+a {
+  text-decoration: none;
+  color: black;
+
+}
+.main-nav-list > a > li:hover {
+  background-color: #FEFFFE;
+}
+
+/* Main Menu */
+.container {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  margin: 0 auto 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  background: linear-gradient(45deg, #5C5863, #3E3A42);
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 30% 20% 50%;
+  grid-template-areas:
+  ". header ."
+  ". article ."
+  "footer footer footer";
+}
+ #my-full-name {
+   font-size: 36px;
+   padding: 40px;
+   color: #cccccc;
+ }
+ #check-this {
+   font-size: 20px;
+   padding: 15px;
+   color: #cccccc;
+ }
+ .pusher {
+   width: 100%;
+   height: 500px;
+   min-height: 100vh;
+ }
+.introduction {
+  grid-area: header;
+
+}
+.introduction-check {
+  grid-area: article;
+
+}
+.my-skills {
+  grid-area: footer;
+}
+.my-skills ul {
+  list-style-type: none;
+  padding: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+.my-skills > ul > li {
+  height: 120px;
+  width: 150px;
+  background: linear-gradient(45deg, #6D6974, #4F4B53);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 25px;
+  font-weight: bold;
+  line-height: 25px;
+  margin: 0 auto 20px auto;
+  -webkit-box-shadow: 10px 10px 52px 2px rgba(0,0,0,0.48);
+  -moz-box-shadow: 10px 10px 52px 2px rgba(0,0,0,0.48);
+  box-shadow: 10px 10px 52px 2px rgba(0,0,0,0.48);
+
+}
+.my-skills > ul > li:first-child:hover {
+  background: linear-gradient(45deg, #E8E159, #6F2434);
+}
+.my-skills > ul > li:hover {
+  background: linear-gradient(45deg, #607DA8, #3C4E69);
+}
+.my-skills > ul > li:last-child:hover {
+  background: linear-gradient(45deg, #F5CA73, #4F4125);
+}
+
+
+/* HTML section */
+.HTML-container {
+  height: 600px;
+  width: 100%;
+  margin: 100px 0 10px 0;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: #9F98AB;
+
+
+}
+.HTML-container > header > div {
+  float: left;
+  margin: 2% 3% 2% 3%;
+  height: 400px;
+  width: 20vw;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #6F2434;
+  border-radius: 10%;
+  filter: opacity(60%);
+  -webkit-box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+}
+.HTML-container > div {
+  margin: 10% 10% 10% 10%;
+  padding: 10px;
+  text-align: justify;
+  text-indent: 5%;
+}
+.HTML-container > div > blockquote {
+  margin: 5px auto 5px auto;
+}
+.HTML-container > div > p > span {
+  text-decoration: underline;
+}
+
+/* CSS section */
+.CSS-container {
+  width: 100%;
+  min-width: 400px;
+  height: 750px;
+  position: relative;
+  display: flex;
+  padding: 20px 0 20px 0;
+  flex-flow: row-reverse;
+  text-align: center;
+  align-items: center;
+  color: #9F98AB;
+  margin: 0;
+  background-color: #303E54;
+  -webkit-box-shadow: -2px -8px 27px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px -8px 27px -4px rgba(0,0,0,0.75);
+  box-shadow: -2px -8px 27px -4px rgba(0,0,0,0.75);
+}
+.CSS-container > header > div {
+  float: right;
+  margin: 2% 6% 2% 1%;
+  height: 400px;
+  width: 20vw;
+  padding: 50px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #195870;
+  border-radius: 10%;
+  color: #ADA6BA;
+  filter: opacity(60%);
+  -webkit-box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+}
+.CSS-container > div {
+  margin: 0 10% 0 0;
+  text-align: justify;
+  text-indent: 5%;
+}
+.CSS-container > div > p {
+  margin: 5% 5% 5% 5%;
+}
+
+/* JS section */
+.JS-container {
+  height: 600px;
+  width: 100%;
+  margin: 50px 0 10px 0;
+  position: relative;
+  top: 0;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: #9F98AB;
+
+}
+.JS-container > header > div {
+  float: left;
+  padding: 50px;
+  margin: 2% 3% 2% 3%;
+  height: 400px;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #E8E159;
+  border-radius: 10%;
+  filter: opacity(80%);
+  -webkit-box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+}
+.JS-container > div {
+  margin: 10% 10% 10% 10%;
+  padding: 10px;
+  text-align: justify;
+  text-indent: 5%;
+}
+.JS-container > div > blockquote {
+  margin: 5px auto 5px auto;
+}
+
+/* Line */
+.line {
+  width: 100%;
+  border: 2px solid black;
+  margin: 0 0 20px 0;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+
+
+}
+
+/* About me section */
+.About-me {
+  height: 600px;
+  width: 80vw;
+  min-width: 460px;
+  border-radius: 40px;
+  margin: 50px auto 50px auto;
+  background-color: #3A4B66;
+  position: relative;
+  color: #9F98AB;
+  text-shadow: 0.8px 0.8px #262429;
+  display: table;
+}
+.About-me > header {
+  text-align: center;
+  font-size: 30px;
+  background-color: #314057;
+  border-radius: 40px 40px 0 0;
+
+}
+.About-me > nav {
+  width: 25vw;
+  max-width: 250px;
+  min-width: 158px;
+  display: flex;
+  height: 564px;
+  background-color: #314057;
+  border-radius: 0 0 0 40px;
+  float: left;
+  -webkit-box-shadow: 4px 2px 6px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 2px 6px -1px rgba(0,0,0,0.75);
+  box-shadow: 4px 2px 6px -1px rgba(0,0,0,0.75);
+  z-index: 2;
+
+}
+.openMenuNav {
+  border-bottom: 1px dotted black;
+  justify-content: center;
+}
+.closebutton {
+  display: none;
+  right: 10px;
+  top: 6px;
+  font-size: 30px;
+}
+.closebutton:hover {
+  color: #9F98AB;
+}
+.About-me > nav > ul {
+  list-style-type: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+
+}
+.About-me > nav > ul > li {
+  padding: 20px 5px 20px 5px;
+  background-color: #3A4B66;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 118px;
+  position: relative;
+  right: 10px;
+  transition: 0.3s;
+  z-index: 1;
+}
+.About-me > nav > ul > li:hover {
+  background-color: #566F96;
+}
+.About-me-content {
+  float: left;
+  max-width: 50vw;
+  letter-spacing: 0.5px;
+  text-indent: 5%;
+  line-height: 23px;
+  margin: 20px 0 20px 20px;
+}
+.About-me-content  ul {
+  flex-direction: column!important;
+}
+#me {
+  background-color: #566F96;
+
+}
+
+/* Footer */
+.contact {
+  background-color: #131921;
+  position: sticky;
+  display: flex;
+  bottom: 0;
+  padding-left: 20px;
+  z-index: -1;
+  margin: 0;
+  height: 150px;
+  color: white;
+  justify-content: flex-end;
+}
+.contactList {
+  flex-direction: column;
+  list-style-type: none;
+  margin: 50px 100px 0 0;
+}
+.contactList > li {
+  padding-top: 15px;
+}
+.contactList > li:first-child {
+  color: #E8E159;
+}
+.contactList > li:focus {
+  color: pink!important;
+}
+.contactList > li > a {
+  color: white;
+  z-index: 0!important;
+}
+
+/* Resize */
+@media only screen and (max-width: 600px) {
+  .main-nav {
+    min-width: 250px;
+  }
+  .main-nav-list > a > li {
+    font-size: 13px;
+  }
+  .HTML-container {
+    height: auto;
+  }
+  .HTML-container > div {
+    margin: 5px 10% 5px 10%;
+    text-align: center;
+  }
+  .HTML-container > header > div {
+    float: none;
+    height: 50px;
+    width: 50vw;
+    margin: 5px auto 5px auto;
+  }
+  .CSS-container {
+    display: table;
+    min-width: 10px;
+  }
+  .CSS-container > header > div {
+    float: none;
+    height: 50px;
+    width: 50vw;
+    margin: 5px auto 30px auto;
+  }
+  .CSS-container > div {
+    margin: 0;
+    text-align: center;
+  }
+  .CSS-container > div > p {
+    margin: 5% 10% 5% 10%;
+  }
+  .JS-container {
+    height: auto;
+  }
+  .JS-container > header > div {
+    float: none;
+    margin: 5px auto 30px auto;
+    height: 50px;
+    width: 50vw;
+  }
+  .JS-container > div {
+    margin: 5px 10% 5px 10%;
+    text-align: center;
+  }
+  .line {
+    margin: 40px 0 20px 0;
+  }
+  .container {
+    height: 110vh;
+    min-height: 600px;
+    grid-gap: 10px;
+    grid-template-rows: 30% 10% 60%;
+    grid-template-areas:
+    ". header ."
+    ". article ."
+    "footer footer footer";
+  }
+  .my-sentence {
+    display: visible;
+  }
+  .About-me {
+    width: 80vw;
+    min-width: 90vw;
+    margin: 50px auto 50px auto;
+  }
+  .About-me > nav {
+    width: 0;
+    max-width: none;
+    min-width: 100px;
+    display: flex;
+    height: 92%;
+    position: fixed;
+    transition: 0.5s;
+    border-radius: 0;
+  }
+  .openMenuNav {
+    display: flex;
+  }
+  .closebutton {
+    display: none;
+    position: absolute;
+
+  }
+  .About-me > nav > ul > li {
+      padding: 20px 5px 20px 5px;
+      max-width: 90vw;
+      min-width: none;
+      right: 0;
+  }
+  .About-me > nav > ul {
+    margin: 5px auto 5px auto;
+    padding-left: 0;
+    width: 100%;
+  }
+  .About-me-content {
+    max-width: none;
+    margin: 20px 8% 20px 8%;
+  }
+  .my-skills ul {
+    flex-direction: column;
+    padding: 0;
+  }
+  .my-skills > ul > li {
+    height: 80px;
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  .main-nav {
+      min-width: 500px;
+  }
+  .main-nav-list > a > li {
+    font-size: 23px;
+  }
+  .HTML-container {
+    height: 900px;
+  }
+  .HTML-container > div {
+    margin: 10% 10% 10% 10%;
+    text-align: justify;
+  }
+  .HTML-container > header > div {
+    float: left;
+    margin: 2% 3% 2% 3%;
+    height: 400px;
+    width: 20vw;
+  }
+  .CSS-container {
+    display: flex;
+    min-width: 400px;
+  }
+  .CSS-container > header > div {
+    float: right;
+    margin: 2% 6% 2% 1%;
+    height: 400px;
+    width: 20vw;
+  }
+  .CSS-container > div {
+    margin: 0 10% 0 0;
+    text-align: justify;
+  }
+  .CSS-container > div > p {
+    margin: 5% 5% 5% 5%;
+  }
+  .JS-container {
+    height: 700px;
+  }
+  .JS-container > header > div {
+    float: left;
+    margin: 2% 3% 2% 3%;
+    height: 400px;
+    width: 20vw;
+  }
+  .JS-container > div {
+    margin: 10% 10% 10% 10%;
+    text-align: justify;
+  }
+  .line {
+    margin: 0 0 20px 0;
+  }
+  .container {
+    height: 110vh;
+    min-height: 600px;
+    grid-gap: 10px;
+    grid-template-rows: 30% 10% 60%;
+    grid-template-areas:
+    ". header ."
+    ". article ."
+    "footer footer footer";
+  }
+  .my-sentence {
+    display: visible;
+  }
+  .About-me {
+    height: 600px;
+    width: 80vw;
+    min-width: 460px;
+    margin: 50px auto 50px auto;
+    position: relative;
+  }
+  .About-me > nav {
+    width: 25vw;
+    max-width: 250px;
+    min-width: 158px;
+    display: flex;
+    height: 564px;
+    position: relative;
+  }
+  .openMenuNav {
+    display: none;
+  }
+  .closebutton {
+    display: none;
+  }
+  .About-me > nav > ul > li {
+      padding: 20px 5px 20px 5px;
+      max-width: 128px;
+      min-width: 50px;
+      right: 0;
+  }
+  .About-me > nav > ul {
+    margin-right: 10px;
+    padding-left: 20px;
+
+  }
+  .About-me-content {
+    max-width: 50vw;
+    margin: 20px 0 20px 20px;
+  }
+  .my-skills ul {
+    flex-direction: column;
+    padding: 100px;
+  }
+  .my-skills > ul > li {
+    height: 80px;
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 870px) {
+  .main-nav {
+      min-width: 500px;
+    }
+  .main-nav-list > a > li {
+    font-size: 23px;
+  }
+  .HTML-container {
+    height: 600px;
+  }
+  .HTML-container > div {
+    margin: 10% 10% 10% 10%;
+    text-align: justify;
+  }
+  .HTML-container > header > div {
+    float: left;
+    margin: 2% 3% 2% 3%;
+    height: 400px;
+    width: 20vw;
+  }
+  .CSS-container {
+    display: flex;
+    min-width: 400px;
+  }
+  .CSS-container > header > div {
+    float: right;
+    margin: 2% 6% 2% 1%;
+    height: 400px;
+    width: 20vw;
+  }
+  .CSS-container > div {
+    margin: 0 10% 0 0;
+    text-align: justify;
+  }
+  .CSS-container > div > p {
+    margin: 5% 5% 5% 5%;
+  }
+  .JS-container {
+    height: 600px;
+  }
+  .JS-container > header > div {
+    float: left;
+    margin: 2% 3% 2% 3%;
+    height: 400px;
+    width: 20vw;
+  }
+  .JS-container > div {
+    margin: 10% 10% 10% 10%;
+    text-align: justify;
+  }
+  .line {
+    margin: 0 0 20px 0;
+  }
+  .container {
+    height: 110vh;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 30% 20% 50%;
+    grid-template-areas:
+    ". header ."
+    ". article ."
+    "footer footer footer";
+  }
+  .my-sentence {
+    display: visible;
+  }
+  .About-me {
+    height: 600px;
+    width: 80vw;
+    min-width: 460px;
+    margin: 50px auto 50px auto;
+    position: relative;
+  }
+  .openMenuNav {
+    display: none;
+  }
+  .closebutton {
+    display: none;
+  }
+  .About-me > nav {
+    width: 25vw;
+    max-width: 250px;
+    min-width: 158px;
+    display: flex;
+    height: 564px;
+    position: relative;
+  }
+  .About-me > nav > ul > li {
+      padding: 20px 5px 20px 5px;
+      max-width: 130px;
+      min-width: 50px;
+      right: 0;
+  }
+  .About-me > nav > ul {
+    margin-right: 10px;
+    padding-left: 40px;
+  }
+  .my-skills ul {
+    flex-direction: row;
+    padding: 100px;
+  }
+  .my-skills > ul > li {
+    height: 120px;
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 870px) {
+  .main-nav {
+      min-width: 500px;
+    }
+  .main-nav-list > a > li {
+    font-size: 23px;
+  }
+  .HTML-container {
+    height: 600px;
+  }
+  .HTML-container > div {
+    margin: 10% 10% 10% 10%;
+    text-align: justify;
+  }
+  .HTML-container > header > div {
+    float: left;
+    margin: 2% 3% 2% 3%;
+    height: 400px;
+    width: 20vw;
+  }
+  .CSS-container {
+    display: flex;
+    min-width: 400px;
+  }
+  .CSS-container > header > div {
+    float: right;
+    margin: 2% 6% 2% 1%;
+    height: 400px;
+    width: 20vw;
+  }
+  .CSS-container > div {
+    margin: 0 10% 0 0;
+    text-align: justify;
+  }
+  .CSS-container > div > p {
+    margin: 5% 5% 5% 5%;
+  }
+  .JS-container {
+    height: 600px;
+  }
+  .JS-container > header > div {
+    float: left;
+    margin: 2% 3% 2% 3%;
+    height: 400px;
+    width: 20vw;
+  }
+  .JS-container > div {
+    margin: 10% 10% 10% 10%;
+    text-align: justify;
+  }
+  .line {
+    margin: 0 0 20px 0;
+  }
+  .container {
+    height: 110vh;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 30% 20% 50%;
+    grid-template-areas:
+    ". header ."
+    ". article ."
+    "footer footer footer";
+  }
+  .my-sentence {
+    display: visible;
+  }
+  .About-me {
+    height: 600px;
+    width: 80vw;
+    min-width: 460px;
+    margin: 50px auto 50px auto;
+    position: relative;
+  }
+  .About-me > nav {
+    width: 25vw;
+    max-width: 250px;
+    min-width: 158px;
+    display: flex;
+    height: 564px;
+    position: relative;
+  }
+  .openMenuNav {
+    display: none;
+  }
+  .closebutton {
+    display: none;
+  }
+  .About-me > nav > ul > li {
+      padding: 20px 5px 20px 5px;
+      min-width: 130px;
+      right: 10px;
+  }
+  .About-me > nav > ul {
+    margin-right: 0;
+    padding-left: 40px;
+  }
+  .my-skills ul {
+    flex-direction: row;
+    padding: 100px;
+  }
+  .my-skills > ul > li {
+    height: 120px;
+    width: 150px;
+  }
+}
+@media print {
+  p {
+    widows: 2;
+  }
+}
